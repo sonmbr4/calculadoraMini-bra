@@ -1,16 +1,19 @@
 //import sumar from ('./operaciones/enteros')
-import {sumar, restar} from "./operaciones/enteros.js"
-import express from "./node_modules/express/lib/express.js"
-import
+//import {sumar, restar} from "./operaciones/enteros.js"
 
-const exp = require('express');
+const expresion = require('express');
 const cal = require('./operaciones/enteros.js')
-
-const app = exp();
+const inventario = require('./operacionObjetos/inventario.js')
+const app = expresion();
 
 app.get('/quieroSumar', (req, res) =>{
-    res.end('<h1>'+enteros.sumar(3, 3)+'</h1>')
+    res.end('<h1>'+cal.sumar(3, 3)+'</h1>')
 })
+
+app.get('/consultarproductos', (req, res) =>{
+    res.end('<h2>Mira la consola <h2>' + inventario.cargarDatos());
+})
+
 
 app.listen(7777, () =>{
     console.log('esta en linea')
