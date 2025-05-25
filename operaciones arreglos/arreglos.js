@@ -22,8 +22,4 @@ function sumararreglo(arr){
 
 
 
-sumararreglo(numeros)
-buscar(numeros, 9)
-
-
 module.exports = {buscar, sumararreglo}
